@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marc-Alexandre Brizard — Pre-Sales Leader & AI-native Builder</title>
 <meta name="description" content="20 ans en avant-vente enterprise. Builder AI-native qui livre en production en moins de 3 semaines.">
+<!-- Open Graph -->
+<meta property="og:title" content="Marc-Alexandre Brizard — Pre-Sales Leader & AI-native Builder">
+<meta property="og:description" content="20 ans en avant-vente enterprise. Builder AI-native qui livre en production en moins de 3 semaines. Bilingue FR/EN. Remote France / Canada.">
+<meta property="og:url" content="https://mabrizard.vercel.app">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Marc-Alexandre Brizard — Pre-Sales Leader & AI-native Builder">
+<meta name="twitter:description" content="20 ans en avant-vente enterprise. Builder AI-native qui livre en production en moins de 3 semaines.">
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230E0E10'/><text y='.9em' font-size='70' x='10'>M</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -118,6 +131,20 @@ h2 em { font-style: italic; color: var(--accent-light); }
 .location-line { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text2); }
 .location-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent2); flex-shrink: 0; animation: pulse 2s ease-in-out infinite; }
 
+/* TIMELINE */
+.timeline-wrap { margin-top: 3rem; padding-top: 2.5rem; border-top: 0.5px solid var(--border); }
+.timeline-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 1.5rem; }
+.timeline { display: flex; align-items: flex-start; gap: 0; flex-wrap: wrap; row-gap: 1.5rem; }
+.tl-item { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 120px; max-width: 180px; text-align: center; }
+.tl-dot { width: 12px; height: 12px; border-radius: 50%; margin-bottom: 10px; flex-shrink: 0; box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px currentColor; }
+.tl-content { }
+.tl-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.tl-desc { font-size: 11px; color: var(--text2); line-height: 1.5; font-weight: 400; }
+.tl-arrow { font-size: 18px; color: var(--text3); padding: 0 4px; margin-top: -2px; align-self: flex-start; padding-top: 2px; flex-shrink: 0; }
+.tl-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2rem; }
+.tl-tag { font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 99px; background: var(--bg2); color: var(--text2); border: 0.5px solid var(--border2); letter-spacing: 0.02em; transition: all 0.15s; }
+.tl-tag:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
 /* APPS */
 .apps-filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 2.5rem; }
 .filter-btn { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 400; padding: 6px 14px; border-radius: 99px; border: 0.5px solid var(--border2); background: transparent; color: var(--text2); cursor: pointer; transition: all 0.15s; letter-spacing: 0.02em; }
@@ -200,14 +227,71 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
 /* ACCENT LINE TOP */
 .top-accent { position: fixed; top: 0; left: 0; right: 0; height: 2.5px; background: linear-gradient(90deg, #7F77DD, #1D9E75); z-index: 200; }
 
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column; justify-content: center; gap: 5px;
+  width: 36px; height: 36px;
+  background: transparent; border: none; cursor: pointer; padding: 4px;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: #F0EEF8; border-radius: 2px;
+  transition: all 0.25s;
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none;
+  position: fixed; top: 64px; left: 0; right: 0; z-index: 99;
+  background: rgba(14,14,16,0.98); backdrop-filter: blur(16px);
+  flex-direction: column; gap: 0;
+  border-bottom: 0.5px solid rgba(255,255,255,0.08);
+  transform: translateY(-10px); opacity: 0;
+  transition: all 0.2s ease;
+}
+.mobile-menu.open {
+  display: flex; transform: translateY(0); opacity: 1;
+}
+.mobile-menu a {
+  font-size: 15px; font-weight: 400; color: #9A98A8;
+  text-decoration: none; padding: 1rem 1.5rem;
+  border-bottom: 0.5px solid rgba(255,255,255,0.05);
+  transition: color 0.15s;
+}
+.mobile-menu a:hover { color: #F0EEF8; }
+.mobile-lang {
+  display: flex; gap: 0; padding: 1rem 1.5rem;
+  border-top: 0.5px solid rgba(255,255,255,0.08);
+}
+.mobile-lang .lang-btn {
+  padding: 7px 18px; border-radius: 99px;
+  border: 0.5px solid rgba(255,255,255,0.2);
+  background: transparent; color: #9A98A8;
+  font-size: 12px; font-weight: 500;
+  cursor: pointer; transition: all 0.15s;
+}
+.mobile-lang .lang-btn:first-child { border-radius: 99px 0 0 99px; }
+.mobile-lang .lang-btn:last-child { border-radius: 0 99px 99px 0; border-left: none; }
+.mobile-lang .lang-btn.active { background: #7F77DD; color: #fff; border-color: #7F77DD; }
+
 @media (max-width: 768px) {
   nav { padding: 0 1.5rem; }
   .nav-links { display: none; }
+  .hamburger { display: flex; }
   section { padding: 80px 1.5rem; }
   #hero { padding-left: 1.5rem; padding-right: 1.5rem; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
   .exp-item { grid-template-columns: 1fr; gap: 0.25rem; }
   footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+  .timeline { flex-direction: column; gap: 1rem; }
+  .tl-arrow { transform: rotate(90deg); align-self: flex-start; margin-left: 4px; }
+  .tl-item { flex-direction: row; text-align: left; max-width: 100%; gap: 12px; align-items: flex-start; }
+  .tl-dot { margin-bottom: 0; margin-top: 4px; flex-shrink: 0; }
 }
 </style>
 </head>
@@ -308,6 +392,62 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
       </div>
     </div>
   </div>
+
+  <!-- TIMELINE -->
+  <div class="timeline-wrap">
+    <div class="timeline-label" data-i18n="about.timeline.label">Parcours en un coup d'œil</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#7F77DD;"></div>
+        <div class="tl-content">
+          <div class="tl-title" data-i18n="tl1.title">Formateur</div>
+          <div class="tl-desc" data-i18n="tl1.desc">Pédagogie technique · Convaincre les publics les plus exigeants</div>
+        </div>
+      </div>
+      <div class="tl-arrow">→</div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#534AB7;"></div>
+        <div class="tl-content">
+          <div class="tl-title" data-i18n="tl2.title">Consultant</div>
+          <div class="tl-desc" data-i18n="tl2.desc">Delivery · Proximité client · Define, Design, Deploy</div>
+        </div>
+      </div>
+      <div class="tl-arrow">→</div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#1D9E75;"></div>
+        <div class="tl-content">
+          <div class="tl-title" data-i18n="tl3.title">Directeur de projet</div>
+          <div class="tl-desc" data-i18n="tl3.desc">Piloter des équipes · Transformer l'ambiguïté en plan</div>
+        </div>
+      </div>
+      <div class="tl-arrow">→</div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#D85A30;"></div>
+        <div class="tl-content">
+          <div class="tl-title" data-i18n="tl4.title">Avant-vente</div>
+          <div class="tl-desc" data-i18n="tl4.desc">Écoute · Conviction · Technique au service de la vente</div>
+        </div>
+      </div>
+      <div class="tl-arrow">→</div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#BA7517;"></div>
+        <div class="tl-content">
+          <div class="tl-title" data-i18n="tl5.title">TAM / Manager</div>
+          <div class="tl-desc" data-i18n="tl5.desc">Leadership EMEA · Drive · Gagner ensemble</div>
+        </div>
+      </div>
+    </div>
+    <div class="tl-tags">
+      <span class="tl-tag" data-i18n="tag.autodidacte">Autodidacte</span>
+      <span class="tl-tag" data-i18n="tag.quicklearner">Quick learner</span>
+      <span class="tl-tag" data-i18n="tag.biais">Bias for action</span>
+      <span class="tl-tag" data-i18n="tag.problemsolver">Problem solver</span>
+      <span class="tl-tag" data-i18n="tag.vulgarisation">Vulgarisation technique</span>
+      <span class="tl-tag" data-i18n="tag.roifirst">ROI-first</span>
+      <span class="tl-tag" data-i18n="tag.shipfast">Ship fast, iterate faster</span>
+    </div>
+  </div>
+
 </section>
 
 <!-- APPS -->
@@ -396,7 +536,9 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
     <div class="skill-group"><div class="skill-group-label" data-i18n="skill.backend">Backend & Data</div><div class="skill-list"><span class="tag">Node.js</span><span class="tag">Fastify</span><span class="tag">PostgreSQL</span><span class="tag">Supabase</span><span class="tag">Prisma</span></div></div>
     <div class="skill-group"><div class="skill-group-label">AI & API</div><div class="skill-list"><span class="tag">Anthropic API</span><span class="tag">Claude Vision</span><span class="tag" data-i18n="skill.prompt">Prompt Engineering</span><span class="tag">RAG</span></div></div>
     <div class="skill-group"><div class="skill-group-label" data-i18n="skill.infra">Infra & DevOps</div><div class="skill-list"><span class="tag">Vercel</span><span class="tag">Cloudflare Pages</span><span class="tag">GitHub CI/CD</span><span class="tag">Serverless</span></div></div>
-    <div class="skill-group"><div class="skill-group-label" data-i18n="skill.presales">Pre-Sales & Business</div><div class="skill-list"><span class="tag">Solutions Consulting</span><span class="tag">MEDDPICC</span><span class="tag">Demo Engineering</span><span class="tag">RFP / POC</span></div></div>
+    <div class="skill-group"><div class="skill-group-label" data-i18n="skill.presales">Pre-Sales & Business</div><div class="skill-list"><span class="tag">Solutions Consulting</span><span class="tag">MEDDPICC</span><span class="tag">Discovery-led</span><span class="tag">Demo Engineering</span><span class="tag">RFP / POC</span><span class="tag">Value Selling</span><span class="tag">Time to value</span><span class="tag">ROI-driven</span></div></div>
+    <div class="skill-group"><div class="skill-group-label" data-i18n="skill.value">Valeur & impact</div><div class="skill-list"><span class="tag">Value-driven delivery</span><span class="tag">Business case</span><span class="tag">Quick wins</span><span class="tag">Déploiement itératif</span><span class="tag">Platform governance</span></div></div>
+    <div class="skill-group"><div class="skill-group-label" data-i18n="skill.method">Méthode & delivery</div><div class="skill-list"><span class="tag">Autodidacte</span><span class="tag">Quick learner</span><span class="tag">Bias for action</span><span class="tag">Agile / Scrum</span><span class="tag">Define · Design · Deploy</span><span class="tag">Stakeholder alignment</span></div></div>
     <div class="skill-group"><div class="skill-group-label" data-i18n="skill.platforms">Plateformes</div><div class="skill-list"><span class="tag">ServiceNow</span><span class="tag">Salesforce</span><span class="tag">Ivanti</span><span class="tag">BMC</span></div></div>
   </div>
 </section>
@@ -475,7 +617,8 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
       <div class="form-group"><label data-i18n="contact.form.name">Nom</label><input type="text" data-i18n-placeholder="contact.form.name.ph"></div>
       <div class="form-group"><label>Email</label><input type="email" data-i18n-placeholder="contact.form.email.ph"></div>
       <div class="form-group"><label data-i18n="contact.form.message">Message</label><textarea data-i18n-placeholder="contact.form.message.ph"></textarea></div>
-      <button class="btn-submit" onclick="handleSubmit()" data-i18n="contact.form.send">Envoyer →</button>
+      <button class="btn-submit" id="submitBtn" onclick="handleSubmit(event)" data-i18n="contact.form.send">Envoyer →</button>
+      <p id="formMsg" style="font-size:13px;margin-top:10px;display:none;"></p>
     </div>
   </div>
 </section>
@@ -500,15 +643,33 @@ const translations = {
     "hero.cta.projects":"Voir mes projets →","hero.cta.contact":"Me contacter",
     "hero.stat1":"Ans en avant-vente enterprise","hero.stat2":"Apps en production","hero.stat3":"De l'idée au déploiement","hero.stat4":"Quota atteint (12M€)",
     "about.title":"À propos",
-    "about.p1.strong":"Je ne suis pas développeur de formation.",
-    "about.p1.rest":" Je suis un profil avant-vente senior — 20 ans à expliquer des produits complexes, qualifier des deals, aligner des équipes techniques et des décideurs business.",
+    "about.p1.strong":"Vingt ans à faire le lien entre la technique et le business.",
+    "about.p1.rest":" Formateur, consultant, directeur de projet, avant-vente — j'ai occupé tous les rôles qui permettent de comprendre un produit, de le vendre et de le déployer. Profil rare : je comprends le code, je lis un compte de résultat et je sais pitcher une salle de direction.",
     "about.p2":"Ce qui a changé : <strong>j'ai appris à livrer des produits complets avec l'IA.</strong> Pas des prototypes. Des applications en production, utilisées par de vraies personnes, avec auth, persistance, et patterns AI avancés.",
-    "about.p3":"Ma conviction : <strong>l'AI-native builder n'est pas celui qui sait coder le mieux — c'est celui qui sait livrer.</strong> Comprendre ce qui se passe sous le capot. Piloter l'IA comme un vrai collaborateur technique. Itérer vite. Documenter proprement.",
+    "about.p3":"Ma conviction : <strong>l'AI-native builder n'est pas celui qui sait coder le mieux — c'est celui qui sait livrer.</strong> Autodidacte, quick learner, biais pour l'action — je construis ce que je ne sais pas encore faire. Et quelle que soit la casquette, je pars toujours de la même question : <strong>quelle est la valeur produite ?</strong> Pas de projet pour le projet — chaque initiative mérite un ROI identifié et un impact mesurable.",
     "about.p4":"Bilingue FR/EN. PR Canada en cours. Disponible remote ou en mobilité.",
     "about.location.label":"Localisation","about.location.value":"France · Remote · Canada (PR en cours)",
     "about.languages.label":"Langues","about.lang.fr":"Français — natif","about.lang.en":"Anglais — courant",
     "about.domains.label":"Domaines de prédilection","about.domain1":"Pre-Sales / Solutions Consulting","about.domain2":"AI Engineering","about.domain3":"SaaS Enterprise",
     "about.looking.label":"Ce que je cherche","about.looking1":"Poste salarié","about.looking2":"Consulting",
+    "about.timeline.label":"Career at a glance",
+    "tl1.title":"Trainer","tl1.desc":"Technical pedagogy · Engaging the toughest audiences",
+    "tl2.title":"Consultant","tl2.desc":"Delivery · Client proximity · Define, Design, Deploy",
+    "tl3.title":"Project Director","tl3.desc":"Team leadership · Turning ambiguity into a plan",
+    "tl4.title":"Pre-Sales","tl4.desc":"Listening · Conviction · Technology in service of the deal",
+    "tl5.title":"TAM / Manager","tl5.desc":"EMEA Leadership · Drive · Winning together",
+    "tag.autodidacte":"Self-taught","tag.quicklearner":"Quick learner","tag.biais":"Bias for action",
+    "tag.problemsolver":"Problem solver","tag.vulgarisation":"Technical storytelling",
+    "tag.roifirst":"ROI-first","tag.shipfast":"Ship fast, iterate faster",
+    "about.timeline.label":"Parcours en un coup d'œil",
+    "tl1.title":"Formateur","tl1.desc":"Pédagogie technique · Convaincre les publics les plus exigeants",
+    "tl2.title":"Consultant","tl2.desc":"Delivery · Proximité client · Define, Design, Deploy",
+    "tl3.title":"Directeur de projet","tl3.desc":"Piloter des équipes · Transformer l'ambiguïté en plan",
+    "tl4.title":"Avant-vente","tl4.desc":"Écoute · Conviction · Technique au service de la vente",
+    "tl5.title":"TAM / Manager","tl5.desc":"Leadership EMEA · Drive · Gagner ensemble",
+    "tag.autodidacte":"Autodidacte","tag.quicklearner":"Quick learner","tag.biais":"Bias for action",
+    "tag.problemsolver":"Problem solver","tag.vulgarisation":"Vulgarisation technique",
+    "tag.roifirst":"ROI-first","tag.shipfast":"Ship fast, iterate faster",
     "apps.title":"Applications","apps.title.em":"en production",
     "apps.filter.all":"Tous les projets","apps.filter.pro":"Professionnel","apps.filter.asso":"Associatif","apps.filter.jeu":"Jeu de rôle",
     "cat.pro":"Professionnel","cat.asso":"Associatif","cat.jeu":"Jeu de rôle","app.see":"Voir l'app",
@@ -521,13 +682,13 @@ const translations = {
     "app.forge.desc":"Application de gestion de personnages pour la communauté du JDR Nephilim (éd. Multisim puis Motul) : arbres de compétences avec prérequis, profils joueurs, sync cloud temps réel. ~6 300 lignes, zéro dépendance — architecture vanilla pour démontrer la maîtrise des fondamentaux.",
     "app.forge.period":"Mars–Avril 2026 · En production",
     "stack.title.em":"patterns AI","stack.intro":"6 patterns AI implémentés en production. Pas de la théorie — des apps réelles qui tournent.",
-    "pattern1.title":"RAG multi-source","pattern1.desc":"Profil candidat + CV + docs de référence injectés en system prompt. Pas de vector DB — full context pour usage mono-utilisateur.",
-    "pattern2.title":"Structured output","pattern2.desc":"JSON schema strict validé côté client. Chaque agent retourne un schema défini qui pilote l'affichage UI.",
-    "pattern3.title":"Tool-calling","pattern3.desc":"Job Scanner : texte/URL → Claude parse → JSON structuré. Classification roleType basée sur les responsabilités réelles.",
-    "pattern4.title":"Multi-agent pipeline","pattern4.desc":"7 agents avec état partagé. Scan → Qualify → ATS → Adapt → Outreach. Même job + contexte RAG passé entre agents.",
-    "pattern5.title":"Few-shot engineering","pattern5.desc":"Outreach Generator : 2 variantes, ton pair-à-pair, liste de phrases interdites, bilingue FR/EN.",
-    "pattern6.title":"Output cleaning","pattern6.desc":"Pipeline cleanAIText() — supprime les artefacts markdown avant stockage pour des outputs professionnels.",
-    "skill.backend":"Backend & Data","skill.prompt":"Prompt Engineering","skill.infra":"Infra & DevOps","skill.presales":"Pre-Sales & Business","skill.platforms":"Plateformes",
+    "pattern1.title":"RAG multi-source","pattern1.desc":"Profil candidat, CV et documents de référence injectés dans le prompt système. Pas de base vectorielle — le contexte complet tient en mémoire pour un outil mono-utilisateur.",
+    "pattern2.title":"Structured output","pattern2.desc":"Schéma JSON strict validé côté client. Chaque agent retourne une structure définie qui pilote entièrement l'affichage.",
+    "pattern3.title":"Tool-calling","pattern3.desc":"Job Scanner : texte ou URL en entrée → Claude analyse → JSON structuré en sortie. Classification du type de poste basée sur les responsabilités réelles, pas seulement l'intitulé.",
+    "pattern4.title":"Multi-agent pipeline","pattern4.desc":"7 agents avec état partagé. Chaque module reçoit le même objet offre d'emploi enrichi du contexte RAG — de l'analyse initiale jusqu'à la rédaction des messages de prospection.",
+    "pattern5.title":"Few-shot engineering","pattern5.desc":"Générateur de messages LinkedIn : 2 variantes par offre, ton entre pairs, liste de formules à bannir pour éviter le style IA, bilingue FR/EN.",
+    "pattern6.title":"Output cleaning","pattern6.desc":"Fonction cleanAIText() appliquée à chaque sortie — supprime les artefacts markdown avant enregistrement pour des documents au rendu professionnel.",
+    "skill.backend":"Backend & Data","skill.prompt":"Prompt Engineering","skill.infra":"Infra & DevOps","skill.presales":"Pre-Sales & Business","skill.value":"Valeur & impact","skill.method":"Méthode & delivery","skill.platforms":"Plateformes",
     "exp.title":"Parcours","exp.title.em":"professionnel","exp.present":"présent",
     "exp.servicenow.desc":"Management d'une équipe de 12 Solutions Consultants. Quota 12M€, atteint à 114%. Pilotage des cycles de vente complexes enterprise, coordination EMEA.",
     "exp.waeg.desc":"Management de la practice Salesforce EMEA — 9 consultants, 1500 j/h. Delivery agile, coordination multi-pays.",
@@ -547,10 +708,10 @@ const translations = {
     "hero.cta.projects":"See my projects →","hero.cta.contact":"Get in touch",
     "hero.stat1":"Years in enterprise pre-sales","hero.stat2":"Apps in production","hero.stat3":"From idea to deployment","hero.stat4":"Quota achieved (€12M)",
     "about.title":"About",
-    "about.p1.strong":"I'm not a trained developer.",
-    "about.p1.rest":" I'm a senior pre-sales professional — 20 years explaining complex products, qualifying deals, and aligning technical teams with business decision-makers.",
+    "about.p1.strong":"Twenty years bridging the gap between technology and business.",
+    "about.p1.rest":" Trainer, consultant, project director, pre-sales — I've held every role that helps you understand a product, sell it, and deploy it. A rare profile: I understand code, I read a P&L, and I know how to pitch a boardroom.",
     "about.p2":"What changed: <strong>I learned to ship complete products with AI.</strong> Not prototypes. Production applications, used by real people, with auth, persistence, and advanced AI patterns.",
-    "about.p3":"My conviction: <strong>an AI-native builder isn't the one who codes best — it's the one who ships.</strong> Understanding what's under the hood. Driving AI like a true technical collaborator. Iterating fast. Documenting properly.",
+    "about.p3":"My conviction: <strong>an AI-native builder isn't the one who codes best — it's the one who ships.</strong> Self-taught, quick learner, bias for action — I build what I don't yet know how to build. And whatever the role, I always start from the same question: <strong>what value does this create?</strong> No project for the sake of it — every initiative deserves an identified ROI and a measurable impact.",
     "about.p4":"Bilingual FR/EN. Canadian PR in progress. Available remote or relocatable.",
     "about.location.label":"Location","about.location.value":"France · Remote · Canada (PR in progress)",
     "about.languages.label":"Languages","about.lang.fr":"French — native","about.lang.en":"English — fluent",
@@ -574,7 +735,7 @@ const translations = {
     "pattern4.title":"Multi-agent pipeline","pattern4.desc":"7 agents with shared state. Scan → Qualify → ATS → Adapt → Outreach. Same job object + RAG context passed between agents.",
     "pattern5.title":"Few-shot engineering","pattern5.desc":"Outreach Generator: 2 variants, peer-to-peer tone, list of forbidden phrases, bilingual FR/EN.",
     "pattern6.title":"Output cleaning","pattern6.desc":"cleanAIText() pipeline — strips markdown artifacts before storage for professional-grade outputs.",
-    "skill.backend":"Backend & Data","skill.prompt":"Prompt Engineering","skill.infra":"Infra & DevOps","skill.presales":"Pre-Sales & Business","skill.platforms":"Platforms",
+    "skill.backend":"Backend & Data","skill.prompt":"Prompt Engineering","skill.infra":"Infra & DevOps","skill.presales":"Pre-Sales & Business","skill.value":"Value & impact","skill.method":"Method & delivery","skill.platforms":"Platforms",
     "exp.title":"Experience","exp.title.em":"","exp.present":"present",
     "exp.servicenow.desc":"Managing a team of 12 Solutions Consultants. €12M quota, achieved at 114%. Leading complex enterprise sales cycles, EMEA coordination.",
     "exp.waeg.desc":"Managing the Salesforce EMEA practice — 9 consultants, 1,500 person-days. Agile delivery, multi-country coordination.",
@@ -595,6 +756,10 @@ function setLang(lang) {
   document.documentElement.lang = lang;
   document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  const mobFr = document.getElementById('mob-btn-fr');
+  const mobEn = document.getElementById('mob-btn-en');
+  if (mobFr) mobFr.classList.toggle('active', lang === 'fr');
+  if (mobEn) mobEn.classList.toggle('active', lang === 'en');
   const t = translations[lang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -606,6 +771,23 @@ function setLang(lang) {
   });
 }
 
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const burger = document.getElementById('hamburger');
+  menu.classList.toggle('open');
+  burger.classList.toggle('open');
+}
+
+// Close menu on outside click
+document.addEventListener('click', function(e) {
+  const menu = document.getElementById('mobileMenu');
+  const burger = document.getElementById('hamburger');
+  if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
+    menu.classList.remove('open');
+    burger.classList.remove('open');
+  }
+});
+
 function filterApps(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -614,14 +796,58 @@ function filterApps(cat, btn) {
   });
 }
 
-function handleSubmit() {
-  const btn = document.querySelector('.btn-submit');
-  btn.textContent = currentLang === 'fr' ? 'Message envoyé ✓' : 'Message sent ✓';
-  btn.style.background = '#1D9E75';
-  setTimeout(() => {
+async function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const msg = document.getElementById('formMsg');
+  const name = document.querySelector('input[type="text"]').value.trim();
+  const email = document.querySelector('input[type="email"]').value.trim();
+  const message = document.querySelector('textarea').value.trim();
+
+  if (!name || !email || !message) {
+    msg.style.display = 'block';
+    msg.style.color = '#D85A30';
+    msg.textContent = currentLang === 'fr' ? 'Merci de remplir tous les champs.' : 'Please fill in all fields.';
+    return;
+  }
+
+  // Formspree endpoint — à remplacer avec le vrai endpoint
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdejdqo';
+
+  if (FORMSPREE_ENDPOINT === 'https://formspree.io/f/xbdejdqo') {
+    msg.style.display = 'block';
+    msg.style.color = '#BA7517';
+    msg.textContent = currentLang === 'fr' ? 'Formulaire en cours de configuration.' : 'Form setup in progress.';
+    return;
+  }
+
+  btn.textContent = currentLang === 'fr' ? 'Envoi...' : 'Sending...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    });
+    if (res.ok) {
+      btn.textContent = currentLang === 'fr' ? 'Message envoyé ✓' : 'Message sent ✓';
+      btn.style.background = '#1D9E75';
+      msg.style.display = 'none';
+      document.querySelector('input[type="text"]').value = '';
+      document.querySelector('input[type="email"]').value = '';
+      document.querySelector('textarea').value = '';
+      setTimeout(() => { btn.textContent = currentLang === 'fr' ? 'Envoyer →' : 'Send →'; btn.style.background = ''; btn.disabled = false; }, 4000);
+    } else {
+      throw new Error('Send failed');
+    }
+  } catch {
     btn.textContent = currentLang === 'fr' ? 'Envoyer →' : 'Send →';
-    btn.style.background = '';
-  }, 3000);
+    btn.disabled = false;
+    msg.style.display = 'block';
+    msg.style.color = '#D85A30';
+    msg.textContent = currentLang === 'fr' ? "Erreur d'envoi. Écrivez directement à mabrizard@gmail.com" : "Send error. Write directly to mabrizard@gmail.com";
+  }
 }
 
 const observer = new IntersectionObserver((entries) => {
