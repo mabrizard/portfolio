@@ -814,13 +814,6 @@ async function handleSubmit(e) {
   // Formspree endpoint — à remplacer avec le vrai endpoint
   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdejdqo';
 
-  if (FORMSPREE_ENDPOINT === 'https://formspree.io/f/xbdejdqo') {
-    msg.style.display = 'block';
-    msg.style.color = '#BA7517';
-    msg.textContent = currentLang === 'fr' ? 'Formulaire en cours de configuration.' : 'Form setup in progress.';
-    return;
-  }
-
   btn.textContent = currentLang === 'fr' ? 'Envoi...' : 'Sending...';
   btn.disabled = true;
 
