@@ -395,56 +395,56 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
 
   <!-- TIMELINE -->
   <div class="timeline-wrap">
-    <div class="timeline-label" data-i18n="about.timeline.label">Parcours en un coup d'œil</div>
+    <div class="timeline-label" data-i18n="about.timeline.label"></div>
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-dot" style="background:#7F77DD;"></div>
         <div class="tl-content">
-          <div class="tl-title" data-i18n="tl1.title">Formateur</div>
-          <div class="tl-desc" data-i18n="tl1.desc">Pédagogie technique · Convaincre les publics les plus exigeants</div>
+          <div class="tl-title" data-i18n="tl1.title"></div>
+          <div class="tl-desc" data-i18n="tl1.desc"></div>
         </div>
       </div>
       <div class="tl-arrow">→</div>
       <div class="tl-item">
         <div class="tl-dot" style="background:#534AB7;"></div>
         <div class="tl-content">
-          <div class="tl-title" data-i18n="tl2.title">Consultant</div>
-          <div class="tl-desc" data-i18n="tl2.desc">Delivery · Proximité client · Define, Design, Deploy</div>
+          <div class="tl-title" data-i18n="tl2.title"></div>
+          <div class="tl-desc" data-i18n="tl2.desc"></div>
         </div>
       </div>
       <div class="tl-arrow">→</div>
       <div class="tl-item">
         <div class="tl-dot" style="background:#1D9E75;"></div>
         <div class="tl-content">
-          <div class="tl-title" data-i18n="tl3.title">Directeur de projet</div>
-          <div class="tl-desc" data-i18n="tl3.desc">Piloter des équipes · Transformer l'ambiguïté en plan</div>
+          <div class="tl-title" data-i18n="tl3.title"></div>
+          <div class="tl-desc" data-i18n="tl3.desc"></div>
         </div>
       </div>
       <div class="tl-arrow">→</div>
       <div class="tl-item">
         <div class="tl-dot" style="background:#D85A30;"></div>
         <div class="tl-content">
-          <div class="tl-title" data-i18n="tl4.title">Avant-vente</div>
-          <div class="tl-desc" data-i18n="tl4.desc">Écoute · Conviction · Technique au service de la vente</div>
+          <div class="tl-title" data-i18n="tl4.title"></div>
+          <div class="tl-desc" data-i18n="tl4.desc"></div>
         </div>
       </div>
       <div class="tl-arrow">→</div>
       <div class="tl-item">
         <div class="tl-dot" style="background:#BA7517;"></div>
         <div class="tl-content">
-          <div class="tl-title" data-i18n="tl5.title">TAM / Manager</div>
-          <div class="tl-desc" data-i18n="tl5.desc">Leadership EMEA · Drive · Gagner ensemble</div>
+          <div class="tl-title" data-i18n="tl5.title"></div>
+          <div class="tl-desc" data-i18n="tl5.desc"></div>
         </div>
       </div>
     </div>
     <div class="tl-tags">
-      <span class="tl-tag" data-i18n="tag.autodidacte">Autodidacte</span>
-      <span class="tl-tag" data-i18n="tag.quicklearner">Quick learner</span>
-      <span class="tl-tag" data-i18n="tag.biais">Bias for action</span>
-      <span class="tl-tag" data-i18n="tag.problemsolver">Problem solver</span>
-      <span class="tl-tag" data-i18n="tag.vulgarisation">Vulgarisation technique</span>
-      <span class="tl-tag" data-i18n="tag.roifirst">ROI-first</span>
-      <span class="tl-tag" data-i18n="tag.shipfast">Ship fast, iterate faster</span>
+      <span class="tl-tag" data-i18n="tag.autodidacte"></span>
+      <span class="tl-tag" data-i18n="tag.quicklearner"></span>
+      <span class="tl-tag" data-i18n="tag.biais"></span>
+      <span class="tl-tag" data-i18n="tag.problemsolver"></span>
+      <span class="tl-tag" data-i18n="tag.vulgarisation"></span>
+      <span class="tl-tag" data-i18n="tag.roifirst"></span>
+      <span class="tl-tag" data-i18n="tag.shipfast"></span>
     </div>
   </div>
 
@@ -609,7 +609,7 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
         <a href="mailto:mabrizard@gmail.com" class="contact-link"><div class="contact-link-icon">✉️</div><div><span class="contact-link-label">Email</span><span class="contact-link-value">mabrizard@gmail.com</span></div></a>
         <a href="https://linkedin.com/in/marc-alexandre-brizard-7048941" target="_blank" class="contact-link"><div class="contact-link-icon">💼</div><div><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">marc-alexandre-brizard</span></div></a>
         <a href="https://github.com/mabrizard" target="_blank" class="contact-link"><div class="contact-link-icon">⌨️</div><div><span class="contact-link-label">GitHub</span><span class="contact-link-value">github.com/mabrizard</span></div></a>
-        <a href="tel:+33673022200" class="contact-link"><div class="contact-link-icon">📱</div><div><span class="contact-link-label" data-i18n="contact.phone">Téléphone</span><span class="contact-link-value">+33 6 73 02 22 00</span></div></a>
+
       </div>
     </div>
     <div class="contact-right">
@@ -749,7 +749,7 @@ const translations = {
   }
 };
 
-let currentLang = 'fr';
+let currentLang = (navigator.language || navigator.userLanguage || 'fr').startsWith('en') ? 'en' : 'fr';
 
 function setLang(lang) {
   currentLang = lang;
@@ -849,6 +849,11 @@ async function handleSubmit(e) {
     msg.textContent = currentLang === 'fr' ? "Erreur d'envoi. Écrivez directement à mabrizard@gmail.com" : "Send error. Write directly to mabrizard@gmail.com";
   }
 }
+
+// Apply language on load
+document.addEventListener('DOMContentLoaded', function() {
+  setLang(currentLang);
+});
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
