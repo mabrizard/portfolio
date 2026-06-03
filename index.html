@@ -850,11 +850,6 @@ async function handleSubmit(e) {
   }
 }
 
-// Apply language on load
-document.addEventListener('DOMContentLoaded', function() {
-  setLang(currentLang);
-});
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) { entry.target.style.opacity='1'; entry.target.style.transform='translateY(0)'; }
@@ -867,6 +862,9 @@ document.querySelectorAll('.app-card,.pattern-card,.skill-group,.exp-item,.aside
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   observer.observe(el);
 });
+
+// Apply correct language on load — runs last, after DOM is ready
+setLang(currentLang);
 </script>
 </body>
 </html>
