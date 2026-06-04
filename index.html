@@ -756,8 +756,10 @@ let currentLang = (navigator.language || navigator.userLanguage || 'fr').startsW
 function setLang(lang) {
   currentLang = lang;
   document.documentElement.lang = lang;
-  document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  const btnFr = document.getElementById('btn-fr');
+  const btnEn = document.getElementById('btn-en');
+  if (btnFr) btnFr.classList.toggle('active', lang === 'fr');
+  if (btnEn) btnEn.classList.toggle('active', lang === 'en');
   ['mob-btn-fr', 'mob-btn-en'].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.classList.toggle('active', (id === 'mob-btn-fr') === (lang === 'fr'));
@@ -776,15 +778,15 @@ function setLang(lang) {
 function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
   const burger = document.getElementById('hamburger');
-  menu.classList.toggle('open');
-  burger.classList.toggle('open');
+  if (menu) menu.classList.toggle('open');
+  if (burger) burger.classList.toggle('open');
 }
 
 // Close menu on outside click
 document.addEventListener('click', function(e) {
   const menu = document.getElementById('mobileMenu');
   const burger = document.getElementById('hamburger');
-  if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
+  if (menu && burger && menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
     menu.classList.remove('open');
     burger.classList.remove('open');
   }
