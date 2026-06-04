@@ -109,6 +109,14 @@ h1 em { font-style: italic; color: #AFA9EC; }
 .btn-ghost { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 400; padding: 11px 18px; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.15s; }
 .btn-ghost:hover { color: rgba(255,255,255,0.6); }
 
+@media (max-width: 768px) {
+  .hero-actions { flex-direction: column; gap: 10px; }
+  .btn-primary { justify-content: center; padding: 16px; border-radius: 14px; font-size: 15px; font-weight: 600; }
+  .btn-secondary { justify-content: center; padding: 15px; border-radius: 14px; font-size: 15px; }
+  .btn-ghost { justify-content: center; padding: 8px; font-size: 13px; }
+  h1 { font-size: 48px; }
+}
+
 .hero-stats { display: flex; gap: 3rem; margin-top: 5rem; border-top: 0.5px solid rgba(255,255,255,0.08); padding-top: 2.5rem; flex-wrap: wrap; }
 .stat-num { font-family: 'DM Serif Display', serif; font-size: 38px; font-weight: 400; color: var(--text); line-height: 1; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .stat-label { font-size: 12px; color: rgba(255,255,255,0.3); font-weight: 300; margin-top: 4px; letter-spacing: 0.02em; }
@@ -295,6 +303,14 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
   .tl-arrow { transform: rotate(90deg); align-self: flex-start; margin-left: 4px; }
   .tl-item { flex-direction: row; text-align: left; max-width: 100%; gap: 12px; align-items: flex-start; }
   .tl-dot { margin-bottom: 0; margin-top: 4px; flex-shrink: 0; }
+
+  /* Patterns — vertical list on mobile */
+  .patterns-grid { grid-template-columns: 1fr; gap: 0; margin-bottom: 2rem; }
+  .pattern-card { border-radius: 0; border-left: none; border-right: none; border-top: none; border-bottom: 0.5px solid var(--border); padding: 14px 0; display: flex; align-items: flex-start; gap: 14px; background: transparent; }
+  .pattern-card:first-child { border-top: 0.5px solid var(--border); }
+  .pattern-icon { width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0; margin-bottom: 0; }
+  .pattern-card h4 { font-size: 14px; margin-bottom: 4px; }
+  .pattern-card p { font-size: 13px; }
 }
 </style>
 </head>
