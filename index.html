@@ -148,6 +148,7 @@ h2 em { font-style: italic; color: var(--accent-light); }
 .tl-tag:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 
 /* APPS */
+.apps-intro-text { font-size: 15px; color: var(--text2); font-weight: 400; line-height: 1.8; margin-bottom: 2rem; max-width: 720px; }
 .apps-filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 2.5rem; }
 .filter-btn { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 400; padding: 6px 14px; border-radius: 99px; border: 0.5px solid var(--border2); background: transparent; color: var(--text2); cursor: pointer; transition: all 0.15s; letter-spacing: 0.02em; }
 .filter-btn:hover { border-color: var(--accent-light); color: var(--text); }
@@ -458,6 +459,7 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
     <span class="section-num">02</span>
     <h2><span data-i18n="apps.title">Applications</span> <em data-i18n="apps.title.em">en production</em></h2>
   </div>
+  <p class="apps-intro-text" data-i18n="apps.intro"></p>
   <div class="apps-filters">
     <button class="filter-btn active" onclick="filterApps('all',this)" data-i18n="apps.filter.all">Tous les projets</button>
     <button class="filter-btn" onclick="filterApps('pro',this)" data-i18n="apps.filter.pro">Professionnel</button>
@@ -663,7 +665,7 @@ const translations = {
     "tag.autodidacte":"Autodidacte","tag.quicklearner":"Quick learner","tag.biais":"Bias for action",
     "tag.problemsolver":"Problem solver","tag.vulgarisation":"Vulgarisation technique",
     "tag.roifirst":"ROI-first","tag.shipfast":"Ship fast, iterate faster",
-    "apps.title":"Applications","apps.title.em":"en production",
+    "apps.title":"Applications","apps.title.em":"en production","apps.intro":"Chaque app commence par une vraie friction — un problème que je connais de l'intérieur. L'expérience utilisateur n'est pas une contrainte, c'est le point de départ. Les premières apps ont été conçues pour des publics non-techniques — seniors, bénévoles, joueurs — ce qui m'a imposé un niveau d'exigence UX que je réapplique systématiquement. Si l'outil n'est pas adopté, il ne résout rien — et un projet sans adoption, c'est un budget dépensé pour rien.",
     "apps.filter.all":"Tous les projets","apps.filter.pro":"Professionnel","apps.filter.asso":"Associatif","apps.filter.jeu":"Jeu de rôle",
     "cat.pro":"Professionnel","cat.asso":"Associatif","cat.jeu":"Jeu de rôle","app.see":"Voir l'app",
     "app.jobhunter.desc":"La recherche d'emploi manuelle, c'est 4h/semaine perdues en copier-coller et tableurs mal adaptés. Job Hunter structure l'ensemble du pipeline : chaque offre préqualifiée en 2 minutes, avec score, lettre de motivation et message LinkedIn générés automatiquement.",
@@ -719,7 +721,7 @@ const translations = {
     "tag.autodidacte":"Self-taught","tag.quicklearner":"Quick learner","tag.biais":"Bias for action",
     "tag.problemsolver":"Problem solver","tag.vulgarisation":"Technical storytelling",
     "tag.roifirst":"ROI-first","tag.shipfast":"Ship fast, iterate faster",
-    "apps.title":"Apps","apps.title.em":"in production",
+    "apps.title":"Apps","apps.title.em":"in production","apps.intro":"Every app starts with a real friction — a problem I know from the inside. User experience isn't a constraint, it's the starting point. The first apps were built for non-technical users — seniors, volunteers, players — which set a level of UX standards I now apply systematically. If the tool isn't adopted, it solves nothing — and a project without adoption is a budget spent for nothing.",
     "apps.filter.all":"All projects","apps.filter.pro":"Professional","apps.filter.asso":"Non-profit","apps.filter.jeu":"Tabletop RPG",
     "cat.pro":"Professional","cat.asso":"Non-profit","cat.jeu":"Tabletop RPG","app.see":"View app",
     "app.jobhunter.desc":"Manual job searching wastes 4+ hours a week on copy-paste and ill-fitted spreadsheets. Job Hunter structures the entire pipeline: every job pre-qualified in 2 minutes, with an auto-generated score, cover letter, and LinkedIn message.",
