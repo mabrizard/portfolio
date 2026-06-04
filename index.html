@@ -106,6 +106,8 @@ h1 em { font-style: italic; color: #AFA9EC; }
 .btn-primary:hover { opacity: 0.85; }
 .btn-secondary { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 400; padding: 11px 24px; border: 0.5px solid rgba(255,255,255,0.18); border-radius: 99px; color: #9A98A8; text-decoration: none; transition: all 0.15s; }
 .btn-secondary:hover { border-color: #AFA9EC; color: #F0EEF8; }
+.btn-ghost { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 400; padding: 11px 18px; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.15s; }
+.btn-ghost:hover { color: rgba(255,255,255,0.6); }
 
 .hero-stats { display: flex; gap: 3rem; margin-top: 5rem; border-top: 0.5px solid rgba(255,255,255,0.08); padding-top: 2.5rem; flex-wrap: wrap; }
 .stat-num { font-family: 'DM Serif Display', serif; font-size: 38px; font-weight: 400; color: var(--text); line-height: 1; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -336,7 +338,7 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
     <div class="hero-actions">
       <a href="#apps" class="btn-primary" data-i18n="hero.cta.projects">Voir mes projets →</a>
       <a href="#contact" class="btn-secondary" data-i18n="hero.cta.contact">Me contacter</a>
-      <a href="https://linkedin.com/in/marc-alexandre-brizard-7048941" target="_blank" class="btn-secondary">LinkedIn ↗</a>
+      <a href="https://linkedin.com/in/marc-alexandre-brizard-7048941" target="_blank" class="btn-ghost">LinkedIn ↗</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item"><div class="stat-num">20+</div><div class="stat-label" data-i18n="hero.stat1">Ans en avant-vente enterprise</div></div>
@@ -482,7 +484,7 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
       <h3>Quinéo</h3>
       <p data-i18n="app.quineo.desc">Application mobile-first pour les associations de loto quine — scan automatique des cartons par IA, gestion des parties et des joueurs. UX pensée pour les bénévoles et les seniors.</p>
       <div class="app-period" data-i18n="app.quineo.period">Avril 2026 · En production</div>
-      <div class="app-coming" data-i18n="app.quineo.coming">✦ Abonnements freemium/premium — à venir</div>
+      
       <div class="app-footer">
         <div class="app-stack"><span class="stack-tag">React 18</span><span class="stack-tag">Claude Vision</span><span class="stack-tag">Vercel</span></div>
         <a href="https://quineo.vercel.app" target="_blank" class="app-link"><span data-i18n="app.see">Voir l'app</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
@@ -647,7 +649,7 @@ const translations = {
     "about.p1.rest":" Formateur, consultant, directeur de projet, avant-vente — j'ai occupé tous les rôles qui permettent de comprendre un produit, de le vendre et de le déployer. Profil rare : je comprends le code, je lis un compte de résultat et je sais pitcher une salle de direction.",
     "about.p2":"Ce qui a changé : <strong>j'ai appris à livrer des produits complets avec l'IA.</strong> Pas des prototypes. Des applications en production, utilisées par de vraies personnes, avec auth, persistance, et patterns AI avancés.",
     "about.p3":"Ma conviction : <strong>l'AI-native builder n'est pas celui qui sait coder le mieux — c'est celui qui sait livrer.</strong> Autodidacte, quick learner, biais pour l'action — je construis ce que je ne sais pas encore faire. Et quelle que soit la casquette, je pars toujours de la même question : <strong>quelle est la valeur produite ?</strong> Pas de projet pour le projet — chaque initiative mérite un ROI identifié et un impact mesurable.",
-    "about.p4":"Bilingue FR/EN. PR Canada en cours. Disponible remote ou en mobilité.",
+    "about.p4":"Bilingue FR/EN. PR Canada en cours. Disponible remote ou en mobilité.<br><br><em>20 ans de terrain — aujourd'hui, je le prouve autrement.</em>",
     "about.location.label":"Localisation","about.location.value":"France · Remote · Canada (PR en cours)",
     "about.languages.label":"Langues","about.lang.fr":"Français — natif","about.lang.en":"Anglais — courant",
     "about.domains.label":"Domaines de prédilection","about.domain1":"Pre-Sales / Solutions Consulting","about.domain2":"AI Engineering","about.domain3":"SaaS Enterprise",
@@ -664,13 +666,13 @@ const translations = {
     "apps.title":"Applications","apps.title.em":"en production",
     "apps.filter.all":"Tous les projets","apps.filter.pro":"Professionnel","apps.filter.asso":"Associatif","apps.filter.jeu":"Jeu de rôle",
     "cat.pro":"Professionnel","cat.asso":"Associatif","cat.jeu":"Jeu de rôle","app.see":"Voir l'app",
-    "app.jobhunter.desc":"Pipeline agentique 7 modules — scanner, qualifier, adapter, pitcher. RAG multi-source, structured output, tool-calling, multi-agent. Remplace tableurs et copy-paste par un workflow structuré.",
+    "app.jobhunter.desc":"La recherche d'emploi manuelle, c'est 4h/semaine perdues en copier-coller et tableurs mal adaptés. Job Hunter structure l'ensemble du pipeline : chaque offre préqualifiée en 2 minutes, avec score, lettre de motivation et message LinkedIn générés automatiquement.",
     "app.jobhunter.period":"Mai 2026 · En production · Supabase sync multi-appareils",
-    "app.quineo.desc":"Application mobile-first pour les associations de loto quine — scan automatique des cartons par IA, gestion des parties et des joueurs. UX pensée pour les bénévoles et les seniors.",
+    "app.quineo.desc":"Gérer un loto à la main, c'est des erreurs, du stress et une installation laborieuse. Quinéo automatise le scan des cartons par IA — installation rapide, zéro erreur, soirée fluide. Pensé pour les bénévoles et les seniors, pas pour les développeurs. Abonnements freemium/premium à venir.",
     "app.quineo.period":"Avril 2026 · En production","app.quineo.coming":"✦ Abonnements freemium/premium — à venir",
-    "app.heritiers.desc":"Plateforme de jeu de rôle en ligne temps réel — fiches personnages synchronisées depuis la plateforme de référence du jeu \"Les Héritiers\" (éditeur Sombres Projets puis Metaplot) via scraping/API JSON, chat persistant, lancers de dés avec mécanique de tricherie, scène partagée avec tokens déplaçables.",
+    "app.heritiers.desc":"Jouer en ligne avec des fiches papier et Discord, c'est une galère permanente. Les Héritiers VTT centralise tout en une plateforme sur mesure : fiches synchronisées depuis la plateforme officielle (Sombres Projets / Metaplot), chat, dés, et scène partagée avec tokens. Conçu pour ce jeu, pas adapté d'un outil générique.",
     "app.heritiers.period":"Avr–Mai 2026 · En production · 6 joueurs simultanés",
-    "app.forge.desc":"Application de gestion de personnages pour la communauté du JDR Nephilim (éd. Multisim puis Motul) : arbres de compétences avec prérequis, profils joueurs, sync cloud temps réel. ~6 300 lignes, zéro dépendance — architecture vanilla pour démontrer la maîtrise des fondamentaux.",
+    "app.forge.desc":"Gérer sa progression Nephilim sur papier ou Excel, c'est plusieurs heures de création de personnage et des erreurs de calcul. Forge des Âmes réduit ça à quelques minutes : arbres de compétences avec prérequis, profils joueurs, sync cloud temps réel. ~6 300 lignes, zéro dépendance.",
     "app.forge.period":"Mars–Avril 2026 · En production",
     "stack.title.em":"patterns AI","stack.intro":"6 patterns AI implémentés en production. Pas de la théorie — des apps réelles qui tournent.",
     "pattern1.title":"RAG multi-source","pattern1.desc":"Profil candidat, CV et documents de référence injectés dans le prompt système. Pas de base vectorielle — le contexte complet tient en mémoire pour un outil mono-utilisateur.",
@@ -703,7 +705,7 @@ const translations = {
     "about.p1.rest":" Trainer, consultant, project director, pre-sales — I've held every role that helps you understand a product, sell it, and deploy it. A rare profile: I understand code, I read a P&L, and I know how to pitch a boardroom.",
     "about.p2":"What changed: <strong>I learned to ship complete products with AI.</strong> Not prototypes. Production applications, used by real people, with auth, persistence, and advanced AI patterns.",
     "about.p3":"My conviction: <strong>an AI-native builder isn't the one who codes best — it's the one who ships.</strong> Self-taught, quick learner, bias for action — I build what I don't yet know how to build. And whatever the role, I always start from the same question: <strong>what value does this create?</strong> No project for the sake of it — every initiative deserves an identified ROI and a measurable impact.",
-    "about.p4":"Bilingual FR/EN. Canadian PR in progress. Available remote or relocatable.",
+    "about.p4":"Bilingual FR/EN. Canadian PR in progress. Available remote or relocatable.<br><br><em>20 years in the field — now I prove it differently.</em>",
     "about.location.label":"Location","about.location.value":"France · Remote · Canada (PR in progress)",
     "about.languages.label":"Languages","about.lang.fr":"French — native","about.lang.en":"English — fluent",
     "about.domains.label":"Areas of expertise","about.domain1":"Pre-Sales / Solutions Consulting","about.domain2":"AI Engineering","about.domain3":"Enterprise SaaS",
@@ -720,13 +722,13 @@ const translations = {
     "apps.title":"Apps","apps.title.em":"in production",
     "apps.filter.all":"All projects","apps.filter.pro":"Professional","apps.filter.asso":"Non-profit","apps.filter.jeu":"Tabletop RPG",
     "cat.pro":"Professional","cat.asso":"Non-profit","cat.jeu":"Tabletop RPG","app.see":"View app",
-    "app.jobhunter.desc":"7-module agentic pipeline — scan, qualify, adapt, pitch. Multi-source RAG, structured output, tool-calling, multi-agent. Replaces spreadsheets and copy-paste with a structured workflow.",
+    "app.jobhunter.desc":"Manual job searching wastes 4+ hours a week on copy-paste and ill-fitted spreadsheets. Job Hunter structures the entire pipeline: every job pre-qualified in 2 minutes, with an auto-generated score, cover letter, and LinkedIn message.",
     "app.jobhunter.period":"May 2026 · In production · Supabase multi-device sync",
-    "app.quineo.desc":"Mobile-first app for non-profit bingo associations — AI-powered automatic card scanning, game and player management. UX designed for volunteers and seniors.",
+    "app.quineo.desc":"Running a bingo night manually means errors, stress, and a painful setup. Quinéo automates card scanning with AI — fast setup, zero mistakes, smooth evening. Built for volunteers and seniors, not developers. Freemium/premium subscriptions coming soon.",
     "app.quineo.period":"April 2026 · In production","app.quineo.coming":"✦ Freemium/premium subscriptions — coming soon",
-    "app.heritiers.desc":"Real-time online tabletop RPG platform — character sheets synced from the official \"Les Héritiers\" platform (publisher Sombres Projets then Metaplot) via scraping/JSON API, persistent chat, dice rolls with cheat mechanics, shared scene with movable tokens.",
+    "app.heritiers.desc":"Playing online with paper sheets and Discord is a constant struggle. Les Héritiers VTT brings everything together: character sheets synced from the official platform (Sombres Projets / Metaplot), chat, dice, and a shared scene with movable tokens. Built for this game, not adapted from a generic tool.",
     "app.heritiers.period":"Apr–May 2026 · In production · 6 simultaneous players",
-    "app.forge.desc":"Character management app for the Nephilim RPG community (pub. Multisim then Motul): skill trees with prerequisites, player profiles, real-time cloud sync. ~6,300 lines, zero dependencies — vanilla architecture to demonstrate mastery of fundamentals.",
+    "app.forge.desc":"Managing Nephilim progression on paper or Excel means hours of character creation and calculation errors. Forge des Âmes cuts that to minutes: skill trees with prerequisites, player profiles, real-time cloud sync. ~6,300 lines, zero dependencies.",
     "app.forge.period":"Mar–Apr 2026 · In production",
     "stack.title.em":"AI patterns","stack.intro":"6 AI patterns implemented in production. Not theory — real apps that run.",
     "pattern1.title":"Multi-source RAG","pattern1.desc":"Candidate profile + CV + reference docs injected into system prompt. No vector DB — full context for single-user tool.",
@@ -756,10 +758,10 @@ function setLang(lang) {
   document.documentElement.lang = lang;
   document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  const mobFr = document.getElementById('mob-btn-fr');
-  const mobEn = document.getElementById('mob-btn-en');
-  if (mobFr) mobFr.classList.toggle('active', lang === 'fr');
-  if (mobEn) mobEn.classList.toggle('active', lang === 'en');
+  ['mob-btn-fr', 'mob-btn-en'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('active', (id === 'mob-btn-fr') === (lang === 'fr'));
+  });
   const t = translations[lang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -850,6 +852,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.08 });
 
 document.querySelectorAll('.app-card,.pattern-card,.skill-group,.exp-item,.aside-block').forEach(el => {
+  if (!el) return;
   el.style.opacity = '0';
   el.style.transform = 'translateY(18px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
