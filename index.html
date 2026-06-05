@@ -11,6 +11,7 @@
 <meta property="og:url" content="https://mabrizard.vercel.app">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="fr_CA">
 <meta property="og:locale:alternate" content="en_US">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
@@ -382,7 +383,7 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
     <div class="about-aside">
       <div class="aside-block">
         <div class="aside-label" data-i18n="about.location.label">Localisation</div>
-        <div class="location-line"><span class="location-dot"></span><span data-i18n="about.location.value">France · Remote · Canada (PR en cours)</span></div>
+        <div class="location-line"><span class="location-dot"></span><span data-i18n="about.location.value">France · Relocating to Canada · Express Entry (volet francophone) en cours</span></div>
       </div>
       <div class="aside-block">
         <div class="aside-label" data-i18n="about.languages.label">Langues</div>
@@ -397,6 +398,7 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
           <span class="tag" data-i18n="about.domain1">Pre-Sales / Solutions Consulting</span>
           <span class="tag" data-i18n="about.domain2">AI Engineering</span>
           <span class="tag" data-i18n="about.domain3">SaaS Enterprise</span>
+          <span class="tag" data-i18n="about.domain4">Transformation & Delivery</span>
           <span class="tag">ITSM / ServiceNow</span>
           <span class="tag">CRM / Salesforce</span>
         </div>
@@ -404,9 +406,10 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
       <div class="aside-block">
         <div class="aside-label" data-i18n="about.looking.label">Ce que je cherche</div>
         <div class="aside-items">
-          <span class="tag green" data-i18n="about.looking1">Poste salarié</span>
-          <span class="tag green" data-i18n="about.looking2">Consulting</span>
-          <span class="tag green">Remote</span>
+          <span class="tag green" data-i18n="about.looking1">SC / SA Manager · PreSales Director</span>
+          <span class="tag green" data-i18n="about.looking2">Platform Owner · Transformation Lead</span>
+          <span class="tag green" data-i18n="about.looking3">Senior IC Presales</span>
+          <span class="tag green" data-i18n="about.looking4">Open to relocation sponsorship</span>
         </div>
       </div>
     </div>
@@ -657,9 +660,9 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
 const translations = {
   fr: {
     "nav.about":"À propos","nav.apps":"Projets","nav.stack":"Stack","nav.experience":"Parcours","nav.contact":"Contact",
-    "hero.available":"Disponible · Remote France / Canada","hero.subtitle":"AI-native builder.",
-    "hero.prop.strong":"20 ans en avant-vente enterprise.",
-    "hero.prop.rest":" Builder AI-native qui livre en production en moins de 3 semaines. Je fais le pont entre la complexité technique et la décision business — en FR comme en EN.",
+    "hero.available":"Disponible · Remote France / Canada · Express Entry en cours","hero.subtitle":"AI-native builder.",
+    "hero.prop.strong":"20 ans en avant-vente et delivery enterprise.",
+    "hero.prop.rest":" Builder AI-native qui livre en production en moins de 3 semaines. Je fais le pont entre la complexité technique, la transformation métier et la décision business — en FR comme en EN.",
     "hero.cta.projects":"Voir mes projets →","hero.cta.contact":"Me contacter",
     "hero.stat1":"Ans en avant-vente enterprise","hero.stat2":"Apps en production","hero.stat3":"De l'idée au déploiement","hero.stat4":"Quota atteint (12M€)",
     "about.title":"À propos",
@@ -668,10 +671,10 @@ const translations = {
     "about.p2":"Ce qui a changé : <strong>j'ai appris à livrer des produits complets avec l'IA.</strong> Pas des prototypes. Des applications en production, utilisées par de vraies personnes, avec auth, persistance, et patterns AI avancés.",
     "about.p3":"Ma conviction : <strong>l'AI-native builder n'est pas celui qui sait coder le mieux — c'est celui qui sait livrer.</strong> Autodidacte, quick learner, biais pour l'action — je construis ce que je ne sais pas encore faire. Et quelle que soit la casquette, je pars toujours de la même question : <strong>quelle est la valeur produite ?</strong> Pas de projet pour le projet — chaque initiative mérite un ROI identifié et un impact mesurable.",
     "about.p4":"Bilingue FR/EN. PR Canada en cours. Disponible remote ou en mobilité.<br><br><em>20 ans de terrain — aujourd'hui, je le prouve autrement.</em>",
-    "about.location.label":"Localisation","about.location.value":"France · Remote · Canada (PR en cours)",
+    "about.location.label":"Localisation","about.location.value":"France · Relocating to Canada · Express Entry (volet francophone) en cours",
     "about.languages.label":"Langues","about.lang.fr":"Français — natif","about.lang.en":"Anglais — courant",
-    "about.domains.label":"Domaines de prédilection","about.domain1":"Pre-Sales / Solutions Consulting","about.domain2":"AI Engineering","about.domain3":"SaaS Enterprise",
-    "about.looking.label":"Ce que je cherche","about.looking1":"Poste salarié","about.looking2":"Consulting",
+    "about.domains.label":"Domaines de prédilection","about.domain1":"Pre-Sales / Solutions Consulting","about.domain2":"AI Engineering","about.domain3":"SaaS Enterprise","about.domain4":"Transformation & Delivery",
+    "about.looking.label":"Ce que je cherche","about.looking1":"SC / SA Manager · PreSales Director","about.looking2":"Platform Owner · Transformation Lead","about.looking3":"Senior IC Presales","about.looking4":"Open to relocation sponsorship",
     "about.timeline.label":"Parcours en un coup d'œil",
     "tl1.title":"Formateur","tl1.desc":"Pédagogie technique · Convaincre les publics les plus exigeants",
     "tl2.title":"Consultant","tl2.desc":"Delivery · Proximité client · Define, Design, Deploy",
@@ -713,9 +716,9 @@ const translations = {
   },
   en: {
     "nav.about":"About","nav.apps":"Projects","nav.stack":"Stack","nav.experience":"Experience","nav.contact":"Contact",
-    "hero.available":"Available · Remote France / Canada","hero.subtitle":"AI-native builder.",
-    "hero.prop.strong":"20 years in enterprise pre-sales.",
-    "hero.prop.rest":" AI-native builder shipping to production in under 3 weeks. I bridge the gap between technical complexity and business decisions — in French and English.",
+    "hero.available":"Available · Remote France / Canada · Express Entry in progress","hero.subtitle":"AI-native builder.",
+    "hero.prop.strong":"20 years in enterprise pre-sales and delivery.",
+    "hero.prop.rest":" AI-native builder shipping to production in under 3 weeks. I bridge technical complexity, business transformation and C-suite decisions — in French and English.",
     "hero.cta.projects":"See my projects →","hero.cta.contact":"Get in touch",
     "hero.stat1":"Years in enterprise pre-sales","hero.stat2":"Apps in production","hero.stat3":"From idea to deployment","hero.stat4":"Quota achieved (€12M)",
     "about.title":"About",
@@ -724,10 +727,10 @@ const translations = {
     "about.p2":"What changed: <strong>I learned to ship complete products with AI.</strong> Not prototypes. Production applications, used by real people, with auth, persistence, and advanced AI patterns.",
     "about.p3":"My conviction: <strong>an AI-native builder isn't the one who codes best — it's the one who ships.</strong> Self-taught, quick learner, bias for action — I build what I don't yet know how to build. And whatever the role, I always start from the same question: <strong>what value does this create?</strong> No project for the sake of it — every initiative deserves an identified ROI and a measurable impact.",
     "about.p4":"Bilingual FR/EN. Canadian PR in progress. Available remote or relocatable.<br><br><em>20 years in the field — now I prove it differently.</em>",
-    "about.location.label":"Location","about.location.value":"France · Remote · Canada (PR in progress)",
+    "about.location.label":"Location","about.location.value":"France · Relocating to Canada · Express Entry (francophone stream) in progress",
     "about.languages.label":"Languages","about.lang.fr":"French — native","about.lang.en":"English — fluent",
-    "about.domains.label":"Areas of expertise","about.domain1":"Pre-Sales / Solutions Consulting","about.domain2":"AI Engineering","about.domain3":"Enterprise SaaS",
-    "about.looking.label":"What I'm looking for","about.looking1":"Full-time position","about.looking2":"Consulting",
+    "about.domains.label":"Areas of expertise","about.domain1":"Pre-Sales / Solutions Consulting","about.domain2":"AI Engineering","about.domain3":"Enterprise SaaS","about.domain4":"Transformation & Delivery",
+    "about.looking.label":"What I'm looking for","about.looking1":"SC / SA Manager · PreSales Director","about.looking2":"Platform Owner · Transformation Lead","about.looking3":"Senior IC Presales","about.looking4":"Open to relocation sponsorship",
     "about.timeline.label":"Career at a glance",
     "tl1.title":"Trainer","tl1.desc":"Technical pedagogy · Engaging the toughest audiences",
     "tl2.title":"Consultant","tl2.desc":"Delivery · Client proximity · Define, Design, Deploy",
