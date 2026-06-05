@@ -327,6 +327,7 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
     <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
     <li><a href="#experience" data-i18n="nav.experience">Parcours</a></li>
     <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+    <li><a href="/MABrizard_HiringMeInCanada.pdf" download class="nav-cta" data-i18n="nav.onepager" style="background:rgba(127,119,221,0.15);border-color:rgba(127,119,221,0.5);color:#AFA9EC;">↓ One-pager</a></li>
     <li>
       <div class="lang-toggle">
         <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
@@ -407,8 +408,8 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
         <div class="aside-label" data-i18n="about.looking.label">Ce que je cherche</div>
         <div class="aside-items">
           <span class="tag green" data-i18n="about.looking1">SC / SA Manager · PreSales Director</span>
-          <span class="tag green" data-i18n="about.looking2">Platform Owner · Transformation Lead</span>
-          <span class="tag green" data-i18n="about.looking3">Senior IC Presales</span>
+          <span class="tag green" data-i18n="about.looking2">Directeur Services-Conseils</span>
+          <span class="tag green" data-i18n="about.looking3">AI Transformation Lead</span>
           <span class="tag green" data-i18n="about.looking4">Open to relocation sponsorship</span>
         </div>
       </div>
@@ -606,6 +607,7 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
         <div class="exp-role">Principal Solution Consultant &amp; Technical KAM</div>
         <div class="exp-desc" data-i18n="exp.bmc.desc">Avant-vente technique sur les comptes stratégiques EMEA. Cycles complexes, POC, réponses à appels d'offres grands comptes.</div>
         <div class="exp-badge">🏆 EMEA Presales of the Year 2010–2011</div>
+        <div class="exp-badge">🤝 Best Team Player — BMC Software 2012</div>
       </div>
     </div>
     <div class="exp-item">
@@ -631,7 +633,7 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
       <div class="contact-links">
         <a href="https://linkedin.com/in/marc-alexandre-brizard-7048941" target="_blank" class="contact-link"><div class="contact-link-icon">💼</div><div><span class="contact-link-label">LinkedIn</span><span class="contact-link-value">marc-alexandre-brizard</span></div></a>
         <a href="https://github.com/mabrizard" target="_blank" class="contact-link"><div class="contact-link-icon">⌨️</div><div><span class="contact-link-label">GitHub</span><span class="contact-link-value">github.com/mabrizard</span></div></a>
-        <a href="/MABrizard_HiringMeInCanada.pdf" download class="contact-link" style="border-color:rgba(127,119,221,0.3);background:rgba(127,119,221,0.04);"><div class="contact-link-icon" style="background:rgba(127,119,221,0.12);">📄</div><div><span class="contact-link-label" data-i18n="contact.onepager.label">One-pager Canada</span><span class="contact-link-value" data-i18n="contact.onepager.value">Télécharger le PDF · FR / EN</span></div></a>
+        <a href="/MABrizard_HiringMeInCanada.pdf" download class="contact-link" style="border-color:var(--accent);background:rgba(127,119,221,0.08);margin-top:4px;"><div class="contact-link-icon" style="background:var(--accent);color:#fff;">📄</div><div><span class="contact-link-label" data-i18n="contact.onepager.label" style="color:var(--accent-light);">One-pager Canada</span><span class="contact-link-value" data-i18n="contact.onepager.value" style="color:var(--accent);font-weight:500;">Télécharger le PDF · FR / EN ↓</span></div></a>
       </div>
     </div>
     <div class="contact-right">
@@ -658,7 +660,7 @@ footer { border-top: 0.5px solid var(--border); padding: 2rem 3rem; display: fle
 <script>
 const translations = {
   fr: {
-    "nav.about":"À propos","nav.apps":"Projets","nav.stack":"Stack","nav.experience":"Parcours","nav.contact":"Contact",
+    "nav.about":"À propos","nav.apps":"Projets","nav.stack":"Stack","nav.experience":"Parcours","nav.contact":"Contact","nav.onepager":"↓ One-pager",
     "hero.available":"Disponible · Remote France / Canada · Express Entry en cours","hero.subtitle":"AI-native builder.",
     "hero.prop.strong":"25 ans d'expérience enterprise — 14 en avant-vente, 11 en delivery.",
     "hero.prop.rest":" Builder AI-native qui livre en production en moins de 3 semaines. Je fais le pont entre la complexité technique, la transformation métier et la décision business — en FR comme en EN.",
@@ -673,7 +675,7 @@ const translations = {
     "about.location.label":"Localisation","about.location.value":"France · Relocating to Canada · Express Entry (volet francophone) en cours",
     "about.languages.label":"Langues","about.lang.fr":"Français — natif","about.lang.en":"Anglais — courant",
     "about.domains.label":"Domaines de prédilection","about.domain1":"Pre-Sales / Solutions Consulting","about.domain2":"AI Engineering","about.domain3":"SaaS Enterprise","about.domain4":"Transformation & Delivery",
-    "about.looking.label":"Ce que je cherche","about.looking1":"SC / SA Manager · PreSales Director","about.looking2":"Platform Owner · Transformation Lead","about.looking3":"Senior IC Presales","about.looking4":"Open to relocation sponsorship",
+    "about.looking.label":"Ce que je cherche","about.looking1":"SC / SA Manager · PreSales Director","about.looking2":"Directeur Services-Conseils","about.looking3":"AI Transformation Lead","about.looking4":"Open to relocation sponsorship",
     "about.timeline.label":"Parcours en un coup d'œil",
     "tl1.title":"Formateur","tl1.desc":"Pédagogie technique · Convaincre les publics les plus exigeants",
     "tl2.title":"Consultant","tl2.desc":"Delivery · Proximité client · Define, Design, Deploy",
@@ -714,7 +716,7 @@ const translations = {
     "contact.form.message.ph":"Votre message...","contact.form.send":"Envoyer →","footer.built":"Built with Claude · Deployed on Vercel"
   },
   en: {
-    "nav.about":"About","nav.apps":"Projects","nav.stack":"Stack","nav.experience":"Experience","nav.contact":"Contact",
+    "nav.about":"About","nav.apps":"Projects","nav.stack":"Stack","nav.experience":"Experience","nav.contact":"Contact","nav.onepager":"↓ One-pager",
     "hero.available":"Available · Remote France / Canada · Express Entry in progress","hero.subtitle":"AI-native builder.",
     "hero.prop.strong":"25 years of enterprise experience — 14 in pre-sales, 11 in delivery.",
     "hero.prop.rest":" AI-native builder shipping to production in under 3 weeks. I bridge technical complexity, business transformation and C-suite decisions — in French and English.",
@@ -729,7 +731,7 @@ const translations = {
     "about.location.label":"Location","about.location.value":"France · Relocating to Canada · Express Entry (francophone stream) in progress",
     "about.languages.label":"Languages","about.lang.fr":"French — native","about.lang.en":"English — fluent",
     "about.domains.label":"Areas of expertise","about.domain1":"Pre-Sales / Solutions Consulting","about.domain2":"AI Engineering","about.domain3":"Enterprise SaaS","about.domain4":"Transformation & Delivery",
-    "about.looking.label":"What I'm looking for","about.looking1":"SC / SA Manager · PreSales Director","about.looking2":"Platform Owner · Transformation Lead","about.looking3":"Senior IC Presales","about.looking4":"Open to relocation sponsorship",
+    "about.looking.label":"What I'm looking for","about.looking1":"SC / SA Manager · PreSales Director","about.looking2":"Director, Advisory Services","about.looking3":"AI Transformation Lead","about.looking4":"Open to relocation sponsorship",
     "about.timeline.label":"Career at a glance",
     "tl1.title":"Trainer","tl1.desc":"Technical pedagogy · Engaging the toughest audiences",
     "tl2.title":"Consultant","tl2.desc":"Delivery · Client proximity · Define, Design, Deploy",
@@ -764,7 +766,7 @@ const translations = {
     "exp.easydesk.desc":"P&L ownership of the Pre-Sales & Consulting BU. ITSM/Ivanti project delivery, consultant and trainer management, offer development, recruitment, commercial management.",
     "exp.bmc.desc":"Technical pre-sales on EMEA strategic accounts. Complex cycles, POCs, enterprise RFP responses.",
     "exp.ivanti.desc":"Pre-sales management for Southern Europe. Coverage of France, Spain, Italy — field sales team support.",
-    "contact.title":"Contact","contact.intro":"An opportunity, a project, a question about AI-native building? I reply within 24 hours.","contact.onepager.label":"Canada one-pager","contact.onepager.value":"Download PDF · FR / EN",
+    "contact.title":"Contact","contact.intro":"An opportunity, a project, a question about AI-native building? I reply within 24 hours.","contact.onepager.label":"Canada one-pager","contact.onepager.value":"Download PDF · FR / EN ↓",
     "contact.phone":"Phone","contact.form.title":"Send a message","contact.form.name":"Name",
     "contact.form.name.ph":"Your name","contact.form.email.ph":"your@email.com","contact.form.message":"Message",
     "contact.form.message.ph":"Your message...","contact.form.send":"Send →","footer.built":"Built with Claude · Deployed on Vercel"
